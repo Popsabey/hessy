@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -18,8 +19,8 @@ const Navbar = () => {
         >
             <div
                 className={`relative flex items-center justify-between px-6 transition-all duration-300 ${isScrolled
-                        ? 'w-[90%] max-w-5xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/60 shadow-lg rounded-full py-3'
-                        : 'w-full max-w-5xl bg-transparent py-2'
+                    ? 'w-[90%] max-w-5xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/60 shadow-lg rounded-full py-3'
+                    : 'w-full max-w-5xl bg-transparent py-2'
                     }`}
             >
                 {/* Left: Logo */}
@@ -35,11 +36,10 @@ const Navbar = () => {
                     <a href="#faq" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">FAQ</a>
                 </div>
 
-                {/* Right: Button */}
                 <div className="flex items-center gap-4">
-                    <button className="inline-flex btn btn-primary text-sm px-5 py-2">
+                    <Link to="/waitlist" className="inline-flex btn btn-primary text-sm px-5 py-2">
                         Join Waitlist
-                    </button>
+                    </Link>
                 </div>
             </div>
         </nav>

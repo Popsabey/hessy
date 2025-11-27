@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -48,10 +49,10 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <button className="btn btn-primary text-base px-8 py-3.5 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 w-full sm:w-auto">
+                    <Link to="/waitlist" className="btn btn-primary text-base px-8 py-3.5 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 w-full sm:w-auto inline-flex items-center justify-center">
                         Get Early Access
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </Link>
                 </motion.div>
 
                 <motion.div

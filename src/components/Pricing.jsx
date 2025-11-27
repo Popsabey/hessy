@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
     return (
@@ -41,9 +42,9 @@ const Pricing = () => {
                                 <Check size={18} className="text-blue-400 dark:text-white" /> Priority Support
                             </li>
                         </ul>
-                        <button className="w-full py-3 rounded-xl bg-blue-600 dark:bg-white text-white dark:text-blue-600 font-medium hover:bg-blue-500 dark:hover:bg-blue-50 transition-colors">
+                        <Link to="/waitlist" className="block w-full text-center py-3 rounded-xl bg-blue-600 dark:bg-white text-white dark:text-blue-600 font-medium hover:bg-blue-500 dark:hover:bg-blue-50 transition-colors">
                             Join Waitlist
-                        </button>
+                        </Link>
                     </motion.div>
                 </div>
             </div>
