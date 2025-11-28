@@ -22,21 +22,25 @@ const Waitlist = () => {
         setIsSubmitting(true);
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxNUYjsyJhpEDbT9imYHjNem-JjWnhCVMyPDSqGXWM_4ZBDAT3ghFYnD5GUd2KEZLdZ/exec';
-        const form = new FormData();
-        form.append('Name', formData.name);
-        form.append('Email', formData.email);
-        form.append('Role', formData.role);
+
+        // Use URLSearchParams for better compatibility with Google Apps Script
+        const params = new URLSearchParams();
+        params.append('Name', formData.name);
+        params.append('Email', formData.email);
+        params.append('Role', formData.role);
 
         try {
-            await fetch(scriptURL, { method: 'POST', body: form });
-            // Google Apps Script often has CORS issues, so we might not get a clean JSON response.
-            // But if fetch doesn't throw, it likely worked.
-            // For a robust implementation with the provided script, we can assume success or use no-cors.
-            // However, the provided script returns JSON. Let's try to just fire and forget or handle basic success.
+            // mode: 'no-cors' is essential for Google Apps Script to accept the request from a browser
+            await fetch(scriptURL, {
+                method: 'POST',
+                body: params,
+                mode: 'no-cors'
+            });
+
+            // With no-cors, we can't read the response status, so we assume success if it didn't throw.
             setSubmitted(true);
         } catch (error) {
             console.error('Error!', error.message);
-            // Optional: Handle error state
             alert("Something went wrong. Please try again.");
         } finally {
             setIsSubmitting(false);
