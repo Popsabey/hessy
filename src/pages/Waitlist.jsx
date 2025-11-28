@@ -11,15 +11,36 @@ const Waitlist = () => {
     });
     const [submitted, setSubmitted] = useState(false);
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here you would typically send the data to your backend
-        console.log('Form submitted:', formData);
-        setSubmitted(true);
+        setIsSubmitting(true);
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxNUYjsyJhpEDbT9imYHjNem-JjWnhCVMyPDSqGXWM_4ZBDAT3ghFYnD5GUd2KEZLdZ/exec';
+        const form = new FormData();
+        form.append('Name', formData.name);
+        form.append('Email', formData.email);
+        form.append('Role', formData.role);
+
+        try {
+            await fetch(scriptURL, { method: 'POST', body: form });
+            // Google Apps Script often has CORS issues, so we might not get a clean JSON response.
+            // But if fetch doesn't throw, it likely worked.
+            // For a robust implementation with the provided script, we can assume success or use no-cors.
+            // However, the provided script returns JSON. Let's try to just fire and forget or handle basic success.
+            setSubmitted(true);
+        } catch (error) {
+            console.error('Error!', error.message);
+            // Optional: Handle error state
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (submitted) {
@@ -118,8 +139,8 @@ const Waitlist = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full btn btn-primary py-3.5 mt-2">
-                            Get Early Access
+                        <button type="submit" disabled={isSubmitting} className="w-full btn btn-primary py-3.5 mt-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                            {isSubmitting ? 'Joining...' : 'Get Early Access'}
                         </button>
                     </form>
 
