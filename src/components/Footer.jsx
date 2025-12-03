@@ -11,7 +11,7 @@ const Footer = () => {
                     {/* Logo & Tagline */}
                     <div className="text-center md:text-left max-w-md">
                         <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-                            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold">H</div>
+                            <img src="/hessie-logo.png" alt="Hessie Logo" className="w-8 h-8 rounded-md" />
                             <div className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Hessie</div>
                         </div>
                         <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
