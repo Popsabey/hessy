@@ -41,7 +41,7 @@ const FAQ = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-2xl md:text-[28px] font-semibold mb-3 text-slate-900 dark:text-white">Questions you likely have</h2>
+                    <h2 className="text-2xl md:text-[28px] font-semibold mb-3 text-slate-900 dark:text-white tracking-tight">Questions you likely have</h2>
                 </motion.div>
 
                 <div className="max-w-3xl mx-auto space-y-4">

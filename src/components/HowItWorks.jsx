@@ -17,7 +17,7 @@ const HowItWorks = () => {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-2xl md:text-[28px] font-semibold mb-3 text-slate-900 dark:text-white">Three Simple Steps</h2>
+                    <h2 className="text-2xl md:text-[28px] font-semibold mb-3 text-slate-900 dark:text-white tracking-tight">Three Simple Steps</h2>
                     <p className="text-lg text-slate-600 dark:text-slate-400">Get your time back in minutes.</p>
                 </motion.div>
 

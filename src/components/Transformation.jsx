@@ -58,7 +58,7 @@ const Transformation = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-2xl md:text-[28px] font-semibold mb-3 text-slate-900 dark:text-white">Imagine Starting Your Day Like This</h2>
+                    <h2 className="text-2xl md:text-[28px] font-semibold mb-3 text-slate-900 dark:text-white tracking-tight">Imagine Starting Your Day Like This</h2>
                 </motion.div>
 
                 <div className="relative max-w-4xl mx-auto">

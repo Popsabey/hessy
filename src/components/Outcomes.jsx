@@ -21,7 +21,7 @@ const Outcomes = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-2xl md:text-[28px] font-semibold mb-3 text-slate-900 dark:text-white">Why Hessie?</h2>
+                    <h2 className="text-2xl md:text-[28px] font-semibold mb-3 text-slate-900 dark:text-white tracking-tight">Why Hessie?</h2>
                     <p className="text-lg text-slate-600 dark:text-slate-400">Hessie gives you 2 hours of your workday back</p>
                 </motion.div>
 

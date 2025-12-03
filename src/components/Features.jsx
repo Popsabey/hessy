@@ -24,7 +24,7 @@ const Features = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-2xl md:text-[28px] font-semibold mb-6 text-slate-900 dark:text-white leading-tight">Everything You Need to Work Smarter</h2>
+                        <h2 className="text-2xl md:text-[28px] font-semibold mb-6 text-slate-900 dark:text-white leading-tight tracking-tight">Everything You Need to Work Smarter</h2>
                         <div className="space-y-4">
                             {features.map((feature, index) => (
                                 <div key={index} className="flex items-center gap-4 group">
