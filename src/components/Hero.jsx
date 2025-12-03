@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Slack, Mail, Calendar, Mic } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -61,7 +61,27 @@ const Hero = () => {
                     transition={{ duration: 1, delay: 1 }}
                     className="mt-8 text-xs text-slate-400 dark:text-slate-500 font-medium"
                 >
-                    Lifetime founding member pricing available
+                    Integrates with your work tools
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 1.2 }}
+                    className="mt-6 flex items-center justify-center gap-4"
+                >
+                    <div className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-sm text-slate-600 dark:text-slate-400" title="Slack">
+                        <Slack size={20} />
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-sm text-slate-600 dark:text-slate-400" title="Gmail">
+                        <Mail size={20} />
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-sm text-slate-600 dark:text-slate-400" title="Calendar">
+                        <Calendar size={20} />
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-sm text-slate-600 dark:text-slate-400" title="Voice">
+                        <Mic size={20} />
+                    </div>
                 </motion.div>
             </div>
         </section>
