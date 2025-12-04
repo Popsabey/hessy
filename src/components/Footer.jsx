@@ -21,16 +21,16 @@ const Footer = () => {
 
                     {/* Connect (Icons) */}
                     <div className="flex gap-6">
-                        <a href="#" className="p-2 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group" aria-label="X (formerly Twitter)">
+                        <a href="https://x.com/gethessie" target="_blank" rel="noopener noreferrer" className="p-2 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group" aria-label="X (formerly Twitter)">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 group-hover:scale-110 transition-transform">
                                 <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
                                 <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
                             </svg>
                         </a>
-                        <a href="#" className="p-2 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/gethessie/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="p-2 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group" aria-label="LinkedIn">
                             <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
                         </a>
-                        <a href="#" className="p-2 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group" aria-label="Email">
+                        <a href="mailto:hessiehq@gmail.com" className="p-2 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group" aria-label="Email">
                             <Mail size={20} className="group-hover:scale-110 transition-transform" />
                         </a>
                     </div>
