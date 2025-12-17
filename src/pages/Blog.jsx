@@ -99,9 +99,9 @@ const Blog = () => {
     return (
         <div className="min-h-screen pt-20 transition-colors duration-300">
             {/* Hero Section */}
-            <section className="relative py-20 px-6 overflow-hidden">
+            <section className="relative py-24 px-6 overflow-hidden">
                 <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-blue-100/40 dark:bg-blue-900/10 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen opacity-70 animate-blob" />
+                    <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-bg-blue-100/40 dark:bg-blue-900/10 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen opacity-70 animate-blob" />
                     <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-purple-100/40 dark:bg-purple-900/10 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen opacity-70 animate-blob animation-delay-2000" />
                 </div>
 
@@ -109,65 +109,66 @@ const Blog = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white tracking-tight"
+                        className="text-5xl md:text-7xl font-bold mb-8 text-slate-900 dark:text-white tracking-tighter"
                     >
-                        The Hessie Blog
+                        The future of work
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
+                        className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-light leading-relaxed"
                     >
-                        Insights on the future of work, voice interfaces, and AI productivity.
+                        Explore how voice AI, intelligent agents, and context-aware tools are reshaping the way we work.
                     </motion.p>
                 </div>
             </section>
 
-            {/* Blog Grid */}
-            <section className="pb-24 px-6">
-                <div className="container max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Blog List - Editorial Layout */}
+            <section className="pb-32 px-6">
+                <div className="container max-w-4xl mx-auto">
+                    <div className="space-y-16">
                         {blogPosts.map((post, index) => (
                             <motion.article
                                 key={post.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.05 }}
-                                className="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ delay: index * 0.1 }}
+                                className="group flex flex-col md:flex-row gap-8 items-center border-b border-slate-100 dark:border-slate-800 pb-16 last:border-0"
                             >
-                                {/* Image Placeholder */}
-                                <div className={`h-48 w-full bg-gradient-to-br ${post.image} opacity-90 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end`}>
-                                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-medium rounded-full w-fit mb-2 border border-white/30">
-                                        {post.category}
-                                    </span>
+                                {/* Image / Visual (Left) */}
+                                <div className="w-full md:w-5/12 aspect-[4/3] rounded-2xl overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-500">
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${post.image} opacity-90 group-hover:scale-105 transition-transform duration-700`} />
+
+                                    {/* Category Tag Overlay */}
+                                    <div className="absolute top-4 left-4">
+                                        <span className="inline-block px-3 py-1 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md text-slate-900 dark:text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
+                                            {post.category}
+                                        </span>
+                                    </div>
                                 </div>
 
-                                <div className="p-6 flex-1 flex flex-col">
-                                    <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 mb-3">
-                                        <div className="flex items-center gap-1">
-                                            <Calendar size={12} />
-                                            {post.date}
-                                        </div>
-                                        <div className="flex items-center gap-1">
-                                            <User size={12} />
-                                            {post.author}
-                                        </div>
+                                {/* Content (Right) */}
+                                <div className="w-full md:w-7/12 flex flex-col justify-center">
+                                    <div className="flex items-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-500 mb-4 uppercase tracking-wide">
+                                        <span>{post.date}</span>
+                                        <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700" />
+                                        <span>{post.author}</span>
                                     </div>
 
-                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                         {post.title}
-                                    </h3>
+                                    </h2>
 
-                                    <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3 flex-1">
+                                    <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6">
                                         {post.excerpt}
                                     </p>
 
-                                    <div className="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
-                                        <span className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform">
-                                            Read Article
-                                            <ArrowRight size={16} className="ml-1" />
+                                    <div>
+                                        <span className="inline-flex items-center text-sm font-bold text-slate-900 dark:text-white group-hover:translate-x-2 transition-transform cursor-pointer">
+                                            Read Story
+                                            <ArrowRight size={16} className="ml-2 text-blue-600 dark:text-blue-400" />
                                         </span>
                                     </div>
                                 </div>
