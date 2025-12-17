@@ -40,7 +40,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="text-lg text-slate-800 dark:text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
                 >
-                    Hessie knows your work like you do, every conversation, every deadline, every person. Talk to her like a colleague. She'll handle it.
+                    Hessie is your voice-first work assistant. Ask questions about work like 'What did Sarah say about the deadline?' and Hessie extracts this info and responds with it
                 </motion.p>
 
                 <motion.div
