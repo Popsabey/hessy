@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Waitlist from './pages/Waitlist';
 import Blog from './pages/Blog'; // Add import
+import { ThemeProvider } from './context/ThemeContext';
 
 
 
