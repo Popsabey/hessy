@@ -4,7 +4,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Waitlist from './pages/Waitlist';
-import { ThemeProvider } from './context/ThemeContext';
+import Blog from './pages/Blog'; // Add import
+
+
 
 // Wrapper to conditionally render Navbar/Footer
 const Layout = ({ children }) => {
@@ -30,6 +32,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/waitlist" element={<Waitlist />} />
+            <Route path="/blog" element={<Blog />} />
           </Routes>
         </Layout>
       </Router>
