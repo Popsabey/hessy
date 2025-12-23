@@ -43,11 +43,11 @@ const WaitlistSection = () => {
     return (
         <section id="waitlist" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
             <div className="container max-w-6xl mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
                     {/* Left Column: Text Content */}
                     <div className="text-left">
-                        <motion.h2
+                        <motion.h3
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -55,7 +55,7 @@ const WaitlistSection = () => {
                             className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight"
                         >
                             Take back your time
-                        </motion.h2>
+                        </motion.h3>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ const WaitlistSection = () => {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
                         >
-                            Hessie assists with work so you focus on tasks that truly matter. Let AI handle the mundane communication while you drive impact.
+                            Hessie assist with work so you focus on tasks that truly matters
                         </motion.p>
                     </div>
 
