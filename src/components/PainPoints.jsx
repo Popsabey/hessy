@@ -47,7 +47,7 @@ const PainPoints = () => {
                     className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
                 >
                     {/* Large Card */}
-                    <motion.div variants={item} className="md:col-span-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-[0_2px_20px_rgba(0,0,0,0.02)] border border-white/60 dark:border-slate-800/60 relative overflow-hidden group hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <motion.div variants={item} className="md:col-span-2 bg-white dark:bg-slate-900/80 dark:backdrop-blur-xl p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800/60 relative overflow-hidden group hover:shadow-md transition-all duration-500 hover:-translate-y-1">
                         <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
                             <MessageSquare size={120} className="text-blue-600 dark:text-blue-400" />
                         </div>
@@ -61,7 +61,7 @@ const PainPoints = () => {
                     </motion.div>
 
                     {/* Tall Card */}
-                    <motion.div variants={item} className="md:row-span-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-[0_2px_20px_rgba(0,0,0,0.02)] border border-white/60 dark:border-slate-800/60 relative overflow-hidden group hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <motion.div variants={item} className="md:row-span-2 bg-white dark:bg-slate-900/80 dark:backdrop-blur-xl p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800/60 relative overflow-hidden group hover:shadow-md transition-all duration-500 hover:-translate-y-1">
                         <div className="absolute bottom-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
                             <Clock size={120} className="text-purple-600 dark:text-purple-400" />
                         </div>
@@ -76,7 +76,7 @@ const PainPoints = () => {
                     </motion.div>
 
                     {/* Medium Card */}
-                    <motion.div variants={item} className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-[0_2px_20px_rgba(0,0,0,0.02)] border border-white/60 dark:border-slate-800/60 relative overflow-hidden group hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <motion.div variants={item} className="bg-white dark:bg-slate-900/80 dark:backdrop-blur-xl p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800/60 relative overflow-hidden group hover:shadow-md transition-all duration-500 hover:-translate-y-1">
                         <div className="relative z-10">
                             <div className="w-12 h-12 rounded-2xl bg-red-50 dark:bg-slate-800 flex items-center justify-center mb-6 text-red-600 dark:text-red-400">
                                 <AlertCircle size={24} />
@@ -87,7 +87,7 @@ const PainPoints = () => {
                     </motion.div>
 
                     {/* Medium Card */}
-                    <motion.div variants={item} className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-[0_2px_20px_rgba(0,0,0,0.02)] border border-white/60 dark:border-slate-800/60 relative overflow-hidden group hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <motion.div variants={item} className="bg-white dark:bg-slate-900/80 dark:backdrop-blur-xl p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800/60 relative overflow-hidden group hover:shadow-md transition-all duration-500 hover:-translate-y-1">
                         <div className="relative z-10">
                             <div className="w-12 h-12 rounded-2xl bg-orange-50 dark:bg-slate-800 flex items-center justify-center mb-6 text-orange-600 dark:text-orange-400">
                                 <Calendar size={24} />

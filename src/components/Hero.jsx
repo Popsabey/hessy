@@ -18,7 +18,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm border border-slate-200 dark:border-slate-800 mb-8 shadow-sm"
+                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900/50 dark:backdrop-blur-sm border border-slate-200 dark:border-slate-800 mb-8 shadow-sm"
                 >
                     <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                     <span className="text-xs text-slate-600 dark:text-slate-300 font-medium tracking-wide uppercase">Join 500+ professionals</span>

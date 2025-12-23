@@ -33,7 +33,7 @@ const HowItWorks = () => {
                         transition={{ delay: 0.1 }}
                         className="relative text-center group"
                     >
-                        <div className="w-16 h-16 mx-auto bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-6 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 mx-auto bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-6 relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
                             <Link className="text-blue-600 dark:text-blue-400" size={24} />
                             <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">1</div>
                         </div>
@@ -50,7 +50,7 @@ const HowItWorks = () => {
                         transition={{ delay: 0.2 }}
                         className="relative text-center group"
                     >
-                        <div className="w-16 h-16 mx-auto bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-6 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 mx-auto bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-6 relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
                             <Mic className="text-purple-600 dark:text-purple-400" size={24} />
                             <div className="absolute -top-2 -right-2 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">2</div>
                         </div>
@@ -67,7 +67,7 @@ const HowItWorks = () => {
                         transition={{ delay: 0.3 }}
                         className="relative text-center group"
                     >
-                        <div className="w-16 h-16 mx-auto bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-6 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 mx-auto bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-6 relative z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
                             <Clock className="text-amber-500 dark:text-amber-400" size={24} />
                             <div className="absolute -top-2 -right-2 w-6 h-6 bg-amber-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">3</div>
                         </div>
