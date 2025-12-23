@@ -28,15 +28,17 @@ const Layout = ({ children }) => {
 const App = () => {
   return (
     <ThemeProvider>
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/waitlist" element={<Waitlist />} />
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-        </Layout>
-      </Router>
+      <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300">
+        <Router>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/waitlist" element={<Waitlist />} />
+              <Route path="/blog" element={<Blog />} />
+            </Routes>
+          </Layout>
+        </Router>
+      </div>
     </ThemeProvider>
   );
 };
