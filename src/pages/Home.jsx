@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import WaitlistSection from '../components/WaitlistSection';
 import PainPoints from '../components/PainPoints';
 import HowItWorks from '../components/HowItWorks';
 import Outcomes from '../components/Outcomes';
@@ -12,6 +13,7 @@ const Home = () => {
     return (
         <main>
             <Hero />
+            <WaitlistSection />
             <PainPoints />
             <HowItWorks />
             <Outcomes />

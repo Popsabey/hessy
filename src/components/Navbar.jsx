@@ -38,9 +38,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <Link to="/waitlist" className="inline-flex btn btn-primary text-sm px-5 py-2">
+                    <a href="#waitlist" className="inline-flex btn btn-primary text-sm px-5 py-2">
                         Join Waitlist
-                    </Link>
+                    </a>
                 </div>
             </div>
         </nav>
