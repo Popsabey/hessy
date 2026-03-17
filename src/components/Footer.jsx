@@ -1,9 +1,7 @@
 import React from 'react';
-import { Linkedin, Mail, Sun, Moon } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
-    const { theme, toggleTheme } = useTheme();
     return (
         <footer className="py-12 bg-slate-50 dark:bg-slate-950 text-slate-600 dark:text-slate-400 transition-colors duration-300">
             <div className="container max-w-5xl mx-auto px-6">

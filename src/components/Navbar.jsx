@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
-    const { theme, toggleTheme } = useTheme();
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -32,25 +29,10 @@ const Navbar = () => {
                     <span className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Hessie</span>
                 </div>
 
-                {/* Center: Links (Absolute Positioned - Desktop Only) */}
-                <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-                    <a href="#how-it-works" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">How it Works</a>
-                    <Link to="/blog" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</Link>
-                    <a href="#pricing" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Pricing</a>
-                    <a href="#faq" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">FAQ</a>
-                </div>
-
                 <div className="flex items-center gap-4">
                     <a href="#waitlist" className="inline-flex btn btn-primary text-sm px-5 py-2">
                         Join Waitlist
                     </a>
-                    <button
-                        onClick={toggleTheme}
-                        className="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                        aria-label="Toggle theme"
-                    >
-                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                    </button>
                 </div>
             </div>
         </nav>
